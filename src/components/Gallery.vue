@@ -3,7 +3,9 @@
     <div class="gallery-panel"
          v-for="image in images"
          :key="image.id">
-      <img :src="thumbUrl(image.filename)">
+      <router-link :to="`/image/${image.id}`">
+        <img :src="thumbUrl(image.filename)">
+      </router-link>
     </div>
   </div>
 </template>
